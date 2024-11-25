@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfcjrnmn53ig7"]
+
+[ext_resource type="Script" path="res://Player/player.gd" id="1_er4ab"]
+[ext_resource type="PackedScene" uid="uid://b57xxlssv0wnv" path="res://Player/Char.ase" id="2_pmm8v"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_humvt"]
+radius = 0.35
+height = 1.15
+
+[node name="Char" type="CharacterBody3D"]
+script = ExtResource("1_er4ab")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_humvt")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.857167, 0.515038, 0, -0.515038, 0.857167, 0, 6, 10)
+doppler_tracking = 1
+projection = 1
+size = 10.0
+near = 0.1
+far = 100.0
+
+[node name="Char" parent="." instance=ExtResource("2_pmm8v")]
+offset = Vector2(0, 0.5)
+pixel_size = 0.04
+billboard = 1
+shaded = true
+alpha_cut = 2
+texture_filter = 0
+animation = &"back_right_jump"

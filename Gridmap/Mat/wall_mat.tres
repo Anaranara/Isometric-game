@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bqlaifnco7wvg"]
+
+[ext_resource type="Texture2D" uid="uid://d22rql0f45yqh" path="res://Gridmap/Texture/wall.png" id="1_4ut8p"]
+
+[resource]
+resource_name = "wall_mat"
+cull_mode = 2
+albedo_texture = ExtResource("1_4ut8p")
+roughness = 0.5
+texture_filter = 0

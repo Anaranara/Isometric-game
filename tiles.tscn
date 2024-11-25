@@ -1,0 +1,98 @@
+[gd_scene load_steps=8 format=3 uid="uid://bo53j1doe2kno"]
+
+[ext_resource type="PackedScene" uid="uid://dyylsnlm006fb" path="res://Gridmap/Tiles/Tiles.blend" id="1_sxdgf"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gkwmo"]
+points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_y1tjt"]
+points = PackedVector3Array(-0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.3, 0.5, 0.5, -0.3, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.65, -0.5, 0.5, 0.65, -0.5, -0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_njnl8"]
+points = PackedVector3Array(0.5, 0.5, 0.5, -2.98023e-08, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -2.98023e-08, 0.5, -0.5, -2.98023e-08, -0.5, 0.5, 0.5, -0.5, -0.5, -2.98023e-08, -0.5, -0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7c4lc"]
+points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, 0, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0.5, -0.5, -0.5, 0)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_380gd"]
+points = PackedVector3Array(0.5, 0.5, 0, 0.5, 0.5, -0.5, -0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0, -0.5, -0.5, -0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nqgij"]
+points = PackedVector3Array(0, 0.5, 0.5, -0.5, 0.5, 0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[node name="Tiles" instance=ExtResource("1_sxdgf")]
+
+[node name="block" parent="." index="0"]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="block" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="block/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_gkwmo")
+
+[node name="back_right_stair" parent="." index="1"]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="back_right_stair" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="back_right_stair/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_y1tjt")
+
+[node name="back_left_stair" parent="." index="2"]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="back_left_stair" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="back_left_stair/StaticBody3D" index="0"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_y1tjt")
+
+[node name="front_left_stair" parent="." index="3"]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="front_left_stair" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="front_left_stair/StaticBody3D" index="0"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_y1tjt")
+
+[node name="front_right_stair" parent="." index="4"]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="front_right_stair" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="front_right_stair/StaticBody3D" index="0"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_y1tjt")
+
+[node name="back_right_wall" parent="." index="5"]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="back_right_wall" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="back_right_wall/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_njnl8")
+
+[node name="front_right_wall" parent="." index="6"]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="front_right_wall" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="front_right_wall/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_7c4lc")
+
+[node name="back_left_wall" parent="." index="7"]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="back_left_wall" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="back_left_wall/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_380gd")
+
+[node name="front_left_wall" parent="." index="8"]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="front_left_wall" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="front_left_wall/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_nqgij")

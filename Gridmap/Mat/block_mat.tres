@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dbsvhn8o16nib"]
+
+[ext_resource type="Texture2D" uid="uid://dmf122uds06mf" path="res://Gridmap/Texture/Block.png" id="1_dvv13"]
+
+[resource]
+resource_name = "block_mat"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_dvv13")
+roughness = 0.5
+texture_filter = 0
